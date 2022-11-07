@@ -29,11 +29,6 @@ contract StudentSocietyDAO {
         uint32  oppose;     //提案反对数
         bool    over;       //判断提案是否结束
     }
-
-    struct Student{
-        bool initiate;              //是否领取初始积分
-        uint32 passProposal;        //通过提案数
-    }
     
     //   ERC20 studentERC20;
     mapping(uint32 => Proposal) public proposals; // A map from proposal index to proposal
@@ -41,16 +36,6 @@ contract StudentSocietyDAO {
     // ...
     // TODO add any variables if you want
     
-    //设置管理员
-    constructor() {
-        studentERC20 = new ERC20("studentERC20", "STU");
-        manager = msg.sender;
-    }
-
-    function helloworld() pure external returns(string memory) {
-        return "hello world";
-    }
-
     //学生获取初始积分
     function getInitERC20() external returns(bool result){
         if(!Student[msg.sender].initiate){
@@ -155,3 +140,6 @@ function getAllProposals() view external returns(Proposal[] memory) {
         return proposals[index];
     }
 }
+
+
+
