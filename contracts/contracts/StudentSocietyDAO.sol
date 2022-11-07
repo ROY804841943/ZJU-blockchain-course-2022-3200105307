@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 // Uncomment this line to use console.log
 // import "hardhat/console.sol";
-
+import SocietyCredit.sol
 contract StudentSocietyDAO {
 
     // use a event if you want
