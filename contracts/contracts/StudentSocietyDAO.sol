@@ -100,8 +100,9 @@ contract StudentSocietyDAO {
 
     //提案通过对提出者进行奖励
     function award_porposer(student proposer){
-                                                                            //对提出者进行积分奖励
-        proposer.ERC20 += Award_Amount;
+         studentERC20.transfer(msg.sender, 100);
+         studentERC20.allow(msg.sender, 100);             //对提出者进行积分奖励
+         proposer.passPropose++;		                  //提案通过次数+1		
     }
 
     //判断学生能否获取纪念品
