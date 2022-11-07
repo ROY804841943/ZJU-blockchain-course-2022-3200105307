@@ -21,7 +21,8 @@
 ## 如何运行
 
 1. 在本地启动ganache应用。
-
+    下载并在本地启动ganache：
+     https://note.youdao.com/s/LKCLMjhS
 2. 在 `./contracts` 中安装需要的依赖，运行如下的命令：
     ```bash
     npm install
